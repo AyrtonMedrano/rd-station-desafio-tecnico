@@ -44,14 +44,14 @@ const getRecommendations = (
     let initialScore = 0;
 
     // Score baseado nas preferencias do usuário
-    selectedPreferences.forEach((preference) => {
+    selectedPreferences?.forEach((preference) => {
       if (product?.preferences?.includes(preference)) {
         initialScore += SCORE_WEIGHTS.PREFERENCE;
       }
     });
 
     // Score baseado nas funcionalidades desejadas pelo usuário
-    selectedFeatures.forEach((feature) => {
+    selectedFeatures?.forEach((feature) => {
       if (product?.features?.includes(feature)) {
         initialScore += SCORE_WEIGHTS.FEATURE;
       }
@@ -61,12 +61,12 @@ const getRecommendations = (
   });
 
   // Função para filtrar produtos com score > 0
-  const validProducts = scoredProducts.filter(
+  const validProducts = scoredProducts?.filter(
     (product) => product.initialScore > 0
   );
 
   // Ordenação por score partindo do maior
-  const orderedProducts = validProducts.sort(
+  const orderedProducts = validProducts?.sort(
     (a, b) => b.initialScore - a.initialScore
   );
 
