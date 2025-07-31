@@ -23,39 +23,37 @@ function App() {
 
   return (
     <ToastProvider>
-    <div className="bg-gray-100 p-8 min-h-screen flex flex-col  w-full">
-      <h1 className="text-3xl text-gray-800 font-bold mb-8 text-center">
-        Recomendador de Produtos RD Station
-      </h1>
+      <div className="bg-gray-100 p-4 sm:p-6 lg:p-8 min-h-screen flex flex-col w-full">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl text-gray-800 font-bold mb-6 sm:mb-8 text-center px-4">
+          Recomendador de Produtos RD Station
+        </h1>
 
-      {/* <div className="bg-white p-8 rounded-lg shadow-md w-full md:w-3/4 lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="col-span-2 mb-4">
-          <p className="text-lg">
-            Bem-vindo ao Recomendador de Produtos RD Station. Aqui você pode
+        <div className="flex flex-col items-center ">
+          <p className="text-sm  text-gray-800  mb-6 sm:mb-8 text-center px-4 w-[60%]">
+            Bem-vindo ao Recomendador de Produtos RD Station.<br/> Aqui você pode
             encontrar uma variedade de produtos da RD Station, cada um projetado
             para atender às necessidades específicas do seu negócio. De CRM a
             Marketing, de Conversas a Inteligência Artificial, temos uma solução
-            para ajudar você a alcançar seus objetivos. Use o formulário abaixo
+            para ajudar você a alcançar seus objetivos.<br/> Use o formulário a esquerda
             para selecionar suas preferências e funcionalidades desejadas e
             receba recomendações personalizadas de produtos que melhor atendam
             às suas necessidades.
           </p>
         </div>
 
-      </div> */}
-      <div className='grid grid-cols-6 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto'>
-        <div className='flex col-span-2 '>
-        <Form recommendationsCallbackUpdate={handleRecommendationsUpdate} />
+        <div className='flex flex-col lg:grid lg:grid-cols-6 gap-6 lg:gap-8 max-w-7xl mx-auto w-full'>
+          <div className='lg:col-span-2 w-full'>
+            <Form recommendationsCallbackUpdate={handleRecommendationsUpdate} />
+          </div>
+          <div className='lg:col-span-4 w-full'>
+            <RecommendationList
+              recommendations={recommendations}
+              isLoading={isLoading}
+            />
+          </div>
+        </div>
       </div>
-        <div className='col-span-4'>
-          <RecommendationList
-            recommendations={recommendations}
-            isLoading={isLoading}
-          />
-        </div>
-        </div>
-    </div>
-    <ToastContainer/>
+      <ToastContainer />
     </ToastProvider>
   );
 }

@@ -6,6 +6,7 @@ const useProducts = () => {
   const [features, setFeatures] = useState([]);
   const [products, setProducts] = useState([]);
 
+
   useEffect(() => {
     const fetchData = async () => {
       try {

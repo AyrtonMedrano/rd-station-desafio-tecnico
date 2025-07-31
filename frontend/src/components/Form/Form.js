@@ -1,5 +1,5 @@
 // Form.js
-import React from 'react';
+//Este componente eu deixaria no lado cliente
 import { Preferences, Features, RecommendationType } from './Fields';
 import { SubmitButton } from './SubmitButton';
 import Accordion from '../shared/Accordion';
@@ -44,6 +44,7 @@ function Form({ recommendationsCallbackUpdate }) {
     const dataRecommendations = getRecommendations(formData);
 
     recommendationsCallbackUpdate(dataRecommendations);
+    // showToast.success('Recomendações geradas com sucesso!');
   };
 
   // Lista de itens renderizdos no accordion
@@ -85,15 +86,15 @@ function Form({ recommendationsCallbackUpdate }) {
   ];
 
   return (
-    <form className="max-w-md mx-auto p-4 rounded-lg " onSubmit={handleSubmit}>
+    <form className="w-full max-w-md mx-auto p-4 sm:p-6 rounded-lg" onSubmit={handleSubmit}>
       <div className="mb-6">
-        <h2 className="text-xl font-bold text-gray-800 mb-4 text-center">
+        <h2 className="text-lg sm:text-xl font-bold text-gray-800 mb-4 text-center">
           Configure suas Preferências
         </h2>
         <Accordion items={accordionItems} defaultOpenIndex={0} />
       </div>
       <div className="flex justify-end">
-        <SubmitButton  text="Obter recomendação" />
+        <SubmitButton text="Obter recomendação" />
       </div>
     </form>
   );
