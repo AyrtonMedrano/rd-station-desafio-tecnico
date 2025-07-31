@@ -2,7 +2,6 @@
 
 ## 🚀 Demo - Ayrton Medrano
 
-
 ## ✨ Principais Melhorias Implementadas
 
 ### 🔗 Backend - Links de Produtos
@@ -33,8 +32,6 @@ O projeto inclui testes unitários para os principais componentes e hooks:
 ```bash
 # Executar todos os testes
 npm test
-
-
 ```
 
 ## 📦 Como Executar
@@ -75,6 +72,11 @@ npm start
 ## Fim das alterações - Ayrton, qualquer dúvida estou a disposição (11) 96694-9707
 
 
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7ad8e586cacba50c369861c50bc9dce513fe55d5
 # Teste Técnico - Recomendador de Produtos RD Station
 
 Este projeto é parte do teste técnico para a vaga de desenvolvedor front-end na RD Station. O objetivo principal é implementar a lógica de recomendação de produtos RD Station em uma aplicação web existente.
