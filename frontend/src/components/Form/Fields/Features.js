@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Checkbox from '../../shared/Checkbox';
 
 function Features({ features, selectedFeatures = [], onFeatureChange }) {
-  const [currentFeatures, setCurrentFeatures] = useState(selectedFeatures)
+  const [currentFeatures, setCurrentFeatures] = useState(selectedFeatures);
 
   const handleFeatureChange = (feature) => {
     const updatedFeatures = currentFeatures.includes(feature)
@@ -13,12 +13,25 @@ function Features({ features, selectedFeatures = [], onFeatureChange }) {
     onFeatureChange(updatedFeatures);
   };
 
+
+  const handleCleanFeatures = () => {
+    setCurrentFeatures([]);
+    onFeatureChange([]);
+  };
+
   return (
     <div className="mb-4">
-      <h2 className="text-lg font-bold mb-2">Funcionalidades:</h2>
+      <div className='flex justify-end'>
+        <button type='button' onClick={handleCleanFeatures} className='text-red-500 hover:text-red-700 text-sm font-medium'>Limpar</button>
+      </div>
+      {/* <h2 className="text-lg font-bold mb-2">Funcionalidades:</h2> */}
       <ul>
         {features.map((feature, index) => (
-          <li key={index} className="mb-2">
+          <li
+            onChange={() => handleFeatureChange(feature)}
+            key={index}
+            className="mb-2 min-h-[40px] flex items-center flex-nowrap pl-2 p-3 hover:bg-gray-100 hover:shadow-md cursor-pointer"
+          >
             <Checkbox
               value={feature}
               checked={currentFeatures.includes(feature)}

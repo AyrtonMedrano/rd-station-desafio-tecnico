@@ -11,17 +11,17 @@ function RecommendationType({ onRecommendationTypeChange }) {
           name="recommendationType"
           value="SingleProduct"
           onChange={() => onRecommendationTypeChange('SingleProduct')}
-          className="mr-2"
+          className="mr-1"
         />
-        <label htmlFor="SingleProduct" className="mr-4">Produto Único</label>
+        <label htmlFor="SingleProduct" className="mr-5 font-serif">Produto Único</label>
         <Checkbox
           type="radio"
           name="recommendationType"
           value="MultipleProducts"
           onChange={() => onRecommendationTypeChange('MultipleProducts')}
-          className="mr-2"
+          className="mr-1"
         />
-        <label htmlFor="MultipleProducts">Múltiplos Produtos</label>
+        <label className='mr-0 font-serif' htmlFor="MultipleProducts">Múltiplos Produtos</label>
       </div>
     </div>
   );

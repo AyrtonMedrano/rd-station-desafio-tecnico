@@ -19,17 +19,26 @@ function Preferences({
     onPreferenceChange(updatedPreferences);
   };
 
+  const handleCleanPreferences = () => {
+    setCurrentPreferences([]);
+    onPreferenceChange([]);
+  };
+
+
   return (
     <div className="mb-4">
-      <h2 className="text-lg font-bold mb-2">Preferências:</h2>
+      <div className='flex justify-end'>
+        <button type='button' onClick={handleCleanPreferences} className='text-red-500 hover:text-red-700 text-sm font-medium'>Limpar</button>
+      </div>
+      {/* <h2 className="text-lg font-bold mb-2">Preferências:</h2> */}
       <ul>
         {preferences.map((preference, index) => (
-          <li key={index} className="mb-2">
+          <li  onChange={() => handlePreferenceChange(preference)} key={index} className="mb-2 min-h-[40px] flex items-center flex-nowrap pl-2 p-3 hover:bg-gray-100 hover:shadow-md cursor-pointer "  >
             <Checkbox
               value={preference}
               checked={currentPreferences.includes(preference)}
               onChange={() => handlePreferenceChange(preference)}
-              className="text-blue-500"
+              className="text-blue-500 "
             >
               {preference}
             </Checkbox>
