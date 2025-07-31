@@ -1,3 +1,80 @@
+# Sistema de Recomendação de Produtos RD Station
+
+## 🚀 Demo - Ayrton Medrano
+
+
+## ✨ Principais Melhorias Implementadas
+
+### 🔗 Backend - Links de Produtos
+- **Adição de links para produtos**: Cada produto agora retorna um link específico que direciona o usuário para a página correspondente ao clicar no card da recomendação.
+
+### 🧹 Frontend - Clean Code e Boas Práticas
+- **Refatoração do App.js**: Aplicação de boas práticas e clean code mantendo comentários para facilitar o entendimento
+- **Otimização do RecommendationList.js**: Melhoria na estrutura e organização do código
+- **Aprimoramento do useRecommendations**: Hook refatorado seguindo padrões de clean code
+
+### 🎨 Componentes de UX
+- **Componente Accordion**: Implementado para melhorar a experiência do usuário no controle do formulário, organizando as seções de forma mais intuitiva
+- **Sistema de Toast**: Componente completo para exibição de avisos, mensagens de erro e sucesso, proporcionando feedback visual adequado ao usuário
+
+### 📱 Responsividade
+- **Design responsivo**: Interface adaptada para diferentes tamanhos de tela (mobile, tablet e desktop)
+- **Layout otimizado**: Experiência consistente em todos os dispositivos
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Frontend**: React.js, Tailwind CSS
+- **Backend**: Node.js, JSON Server
+
+## 🧪 Testes
+
+O projeto inclui testes unitários para os principais componentes e hooks:
+
+```bash
+# Executar todos os testes
+npm test
+
+
+```
+
+## 📦 Como Executar
+
+1. **Clone o repositório**
+```bash
+git clone [url-do-repositorio]
+cd monorepo
+```
+
+2. **Instale as dependências**
+```bash
+npm install
+```
+
+3. **Execute o backend**
+```bash
+cd backend
+npm start
+```
+
+4. **Execute o frontend**
+```bash
+cd frontend
+npm start
+```
+
+## 🎯 Funcionalidades
+
+- ✅ Seleção de preferências e funcionalidades
+- ✅ Recomendação de produto único ou múltiplos produtos
+- ✅ Interface responsiva e intuitiva
+- ✅ Sistema de notificações (Toast)
+- ✅ Navegação organizada com Accordion
+- ✅ Links diretos para produtos recomendados
+- ✅ Validação de formulário com feedback visual
+
+## Fim das alterações - Ayrton, qualquer dúvida estou a disposição (11) 96694-9707
+
+
 # Teste Técnico - Recomendador de Produtos RD Station
 
 Este projeto é parte do teste técnico para a vaga de desenvolvedor front-end na RD Station. O objetivo principal é implementar a lógica de recomendação de produtos RD Station em uma aplicação web existente.
