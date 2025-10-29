@@ -23,6 +23,7 @@ function Form({ recommendationsCallbackUpdate }) {
     e.preventDefault();
 
     //25:35 Validar se o usuário selecionou uma preferência ou uma funcionalidade
+    
     if (
       formData.selectedPreferences.length === 0 &&
       formData.selectedFeatures.length === 0
